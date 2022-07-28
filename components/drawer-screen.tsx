@@ -11,7 +11,7 @@ import {
   DrawerItem,
 } from '@react-navigation/drawer';
 import CustomDrawer from './CustomDrawer';
-
+import RegiForm from './register';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import SettingStack from './HomeStack';
  
@@ -67,7 +67,18 @@ function MyDrawer() {
           headerTintColor: 'black',
         }}
       />
-      
+       <Drawer.Screen name="Register" component={RegiForm}
+        options={{
+          drawerIcon: ({ color }) => (
+            <Ionicons name="mail-outline" size={22} color={ color} />
+          ),
+          headerStyle: {
+            backgroundColor: '#e3b39f',
+            height: 100,
+          },
+          headerTintColor: 'black',
+        }}
+      />
     </Drawer.Navigator>
   );
 }
